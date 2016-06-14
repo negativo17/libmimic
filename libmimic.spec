@@ -63,25 +63,3 @@ find %{buildroot} -name "*.la" -delete
 
 * Mon Sep 01 2014 Sérgio Basto <sergio@serjux.com> - 1.0.4-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
-
-* Sun Mar 02 2014 Hans de Goede <j.w.r.degoede@gmail.com> - 1.0.4-7
-- Stop using pre-built docs (rf3114)
-
-* Sun Mar 03 2013 Nicolas Chauvet <kwizart@gmail.com> - 1.0.4-6
-- Mass rebuilt for Fedora 19 Features
-
-* Wed Feb 08 2012 Nicolas Chauvet <kwizart@gmail.com> - 1.0.4-5
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
-
-* Sat Nov  7 2009 Hans de Goede <j.w.r.degoede@hhs.nl> 1.0.4-4
-- Fix multilib conflict in -devel package (rf858)
-
-* Fri Aug  7 2009 Hans de Goede <j.w.r.degoede@hhs.nl> 1.0.4-3
-- Actually link to glib-2.0 not the ancient glib (issue
-  caused by the undefined-non-weak-symbol fix) (rf487)
-
-* Thu Aug  6 2009 Hans de Goede <j.w.r.degoede@hhs.nl> 1.0.4-2
-- Fix undefined-non-weak-symbol in libmimic.so.0 (rf487)
-
-* Sun Mar 29 2009 Hans de Goede <j.w.r.degoede@hhs.nl> 1.0.4-1
-- First version of the RPM Fusion package
