@@ -1,9 +1,9 @@
 Name:           libmimic
 Version:        1.0.4
-Release:        9%{?dist}
+Release:        10%{?dist}
 Summary:        Encoding/decoding library for Mimic V2.x
 License:        LGPLv2+
-URL:            http://farsight.sourceforge.net/
+URL:            https://www.freedesktop.org/wiki/Software/Farstream/
 
 Source0:        http://downloads.sourceforge.net/farsight/%{name}-%{version}.tar.gz
 
@@ -31,7 +31,7 @@ The %{name}-devel package contains libraries and header files for developing
 applications that use %{name}.
 
 %prep
-%setup -q
+%autosetup
 
 %build
 autoreconf -vif
@@ -42,9 +42,7 @@ make %{?_smp_mflags} libmimic_la_LIBADD="-lglib-2.0 -lm"
 %make_install
 find %{buildroot} -name "*.la" -delete
 
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
+%ldconfig_scriptlets
 
 %files
 %license COPYING
@@ -58,6 +56,9 @@ find %{buildroot} -name "*.la" -delete
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Fri Jun 29 2018 Simone Caronni <negativo17@gmail.com> - 1.0.4-10
+- Update SPEC file.
+
 * Tue Jun 14 2016 Simone Caronni <negativo17@gmail.com> - 1.0.4-9
 - Clean up SPEC file.
 
