@@ -1,6 +1,6 @@
 Name:           libmimic
 Version:        1.0.4
-Release:        10%{?dist}
+Release:        11%{?dist}
 Summary:        Encoding/decoding library for Mimic V2.x
 License:        LGPLv2+
 URL:            https://www.freedesktop.org/wiki/Software/Farstream/
@@ -10,6 +10,7 @@ Source0:        http://downloads.sourceforge.net/farsight/%{name}-%{version}.tar
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  doxygen
+BuildRequires:  gcc
 BuildRequires:  glib2-devel
 BuildRequires:  libtool
 
@@ -56,6 +57,9 @@ find %{buildroot} -name "*.la" -delete
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Thu Sep 20 2018 Simone Caronni <negativo17@gmail.com> - 1.0.4-11
+- Add GCC build requirement.
+
 * Fri Jun 29 2018 Simone Caronni <negativo17@gmail.com> - 1.0.4-10
 - Update SPEC file.
 
